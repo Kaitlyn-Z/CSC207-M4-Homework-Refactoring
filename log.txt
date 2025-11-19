@@ -1,9 +1,11 @@
-bec0d9e (HEAD -> main) completed extraction of getVolumeCredits
+0b1b7fd (HEAD -> main) got rid of frmt local variable
+74d7cf9 (origin/main, origin/HEAD) Task 2.2 changed log.txt
+bec0d9e completed extraction of getVolumeCredits
 fd6497c updated log.txt, Task 2.1
 b85cfe5 remove play parameter from getAmount
 65255ea changed name of thisAmount to currentAmount, changed p to performance in for loop
 2ab72a5 extracted switch statement (task 2.1.1), tests still run, renamed parameter p to performance
-1c87a24 (origin/main, origin/HEAD) added log to log.txt. Task 1.2 should be done.
+1c87a24 added log to log.txt. Task 1.2 should be done.
 b2be389 changed final changes, no more CheckStyle red lines, test runs, hopefully completed Task 1.1
 fba68c2 added getters/setters and changed variables to private in StatementPrinter.java
 51a50f5 changed statementPrinter.java to accomodate the new getters and setters (statement printer test also passes)
