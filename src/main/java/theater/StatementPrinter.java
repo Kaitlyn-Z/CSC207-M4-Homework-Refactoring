@@ -47,22 +47,22 @@ public class StatementPrinter {
 
         final NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
 
-        for (Performance p : invoice.getPerformances()) {
-            final Play play = plays.get(p.getPlayID());
+        for (Performance performance : invoice.getPerformances()) {
+            final Play play = plays.get(performance.getPlayID());
 
-            final int thisAmount = getAmount(p, play);
+            final int currentAmount = getAmount(performance, play);
 
             // add volume credits
-            volumeCredits += Math.max(p.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
+            volumeCredits += Math.max(performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
             // add extra credit for every five comedy attendees
             if ("comedy".equals(play.getType())) {
-                volumeCredits += p.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
+                volumeCredits += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
             }
 
             // print line for this order
             result.append(String.format("  %s: %s (%s seats)%n", play.getName(),
-                    frmt.format(thisAmount / Constants.PERCENT_FACTOR), p.getAudience()));
-            totalAmount += thisAmount;
+                    frmt.format(currentAmount / Constants.PERCENT_FACTOR), performance.getAudience()));
+            totalAmount += currentAmount;
         }
         result.append(String.format("Amount owed is %s%n", frmt.format(totalAmount / Constants.PERCENT_FACTOR)));
         result.append(String.format("You earned %s credits%n", volumeCredits));
