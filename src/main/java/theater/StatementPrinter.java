@@ -56,11 +56,11 @@ public class StatementPrinter {
     }
 
     private int getTotalAmount() {
-        int totalAmount = 0;
+        int result = 0;
         for (Performance performance : invoice.getPerformances()) {
-            totalAmount += getAmount(performance);
+            result += getAmount(performance);
         }
-        return totalAmount;
+        return result;
     }
 
     private int getTotalVolumeCredits() {
