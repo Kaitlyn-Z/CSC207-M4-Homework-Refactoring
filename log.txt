@@ -1,4 +1,6 @@
-b85cfe5 (HEAD -> main) remove play parameter from getAmount
+bec0d9e (HEAD -> main) completed extraction of getVolumeCredits
+fd6497c updated log.txt, Task 2.1
+b85cfe5 remove play parameter from getAmount
 65255ea changed name of thisAmount to currentAmount, changed p to performance in for loop
 2ab72a5 extracted switch statement (task 2.1.1), tests still run, renamed parameter p to performance
 1c87a24 (origin/main, origin/HEAD) added log to log.txt. Task 1.2 should be done.
