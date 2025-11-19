@@ -8,11 +8,28 @@ import java.util.Map;
  * This class generates a statement for a given invoice of performances.
  */
 public class StatementPrinter {
-    public Invoice invoice;
-    public Map<String, Play> plays;
+    private Invoice invoice;
+    private Map<String, Play> plays;
 
     public StatementPrinter(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
+        this.plays = plays;
+    }
+
+    // Getters and setters for invoice and plays
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public Map<String, Play> getPlays() {
+        return plays;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
+    }
+
+    public void setPlays(Map<String, Play> plays) {
         this.plays = plays;
     }
 
