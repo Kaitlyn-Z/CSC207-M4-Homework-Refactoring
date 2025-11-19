@@ -1,0 +1,8 @@
+b2be389 (HEAD -> main) changed final changes, no more CheckStyle red lines, test runs, hopefully completed Task 1.1
+fba68c2 (origin/main, origin/HEAD) added getters/setters and changed variables to private in StatementPrinter.java
+51a50f5 changed statementPrinter.java to accomodate the new getters and setters (statement printer test also passes)
+adba227 changed statementPrinter.java to accomodate the new getters and setters
+9b36799 changed variables to private and added getters and setters in Play.java and Performance.java (gets rid of a yellow error that says the variables may be final)
+23c64f8 changed playID and audience to private variables with getters in Performance.java
+93fdf56 fixed order of public static final in Constants.java
+abf2252 Initial commit
