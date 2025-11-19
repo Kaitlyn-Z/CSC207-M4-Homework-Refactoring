@@ -20,4 +20,12 @@ public class Performance {
     public int getAudience() {
         return audience;
     }
+
+    public void setPlayID(String playID) {
+        this.playID = playID;
+    }
+
+    public void setAudience(int audience) {
+        this.audience = audience;
+    }
 }
