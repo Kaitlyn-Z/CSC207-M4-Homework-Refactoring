@@ -1,5 +1,9 @@
-b2be389 (HEAD -> main) changed final changes, no more CheckStyle red lines, test runs, hopefully completed Task 1.1
-fba68c2 (origin/main, origin/HEAD) added getters/setters and changed variables to private in StatementPrinter.java
+b85cfe5 (HEAD -> main) remove play parameter from getAmount
+65255ea changed name of thisAmount to currentAmount, changed p to performance in for loop
+2ab72a5 extracted switch statement (task 2.1.1), tests still run, renamed parameter p to performance
+1c87a24 (origin/main, origin/HEAD) added log to log.txt. Task 1.2 should be done.
+b2be389 changed final changes, no more CheckStyle red lines, test runs, hopefully completed Task 1.1
+fba68c2 added getters/setters and changed variables to private in StatementPrinter.java
 51a50f5 changed statementPrinter.java to accomodate the new getters and setters (statement printer test also passes)
 adba227 changed statementPrinter.java to accomodate the new getters and setters
 9b36799 changed variables to private and added getters and setters in Play.java and Performance.java (gets rid of a yellow error that says the variables may be final)
