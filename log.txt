@@ -1,7 +1,8 @@
-3a3a635 (HEAD -> main) renamed variable to result in getTotalAmount
+3d28d84 (HEAD -> main, origin/main, origin/HEAD) Task 2.4
+3a3a635 renamed variable to result in getTotalAmount
 59efb46 refactored getTotalAmount
 d0ca483 refactored getTotalVolumeAmount
-dccd9f2 (origin/main, origin/HEAD) Task 2.3 log.txt
+dccd9f2 Task 2.3 log.txt
 0b1b7fd got rid of frmt local variable
 74d7cf9 Task 2.2 changed log.txt
 bec0d9e completed extraction of getVolumeCredits
