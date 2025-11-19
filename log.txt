@@ -1,5 +1,9 @@
-0b1b7fd (HEAD -> main) got rid of frmt local variable
-74d7cf9 (origin/main, origin/HEAD) Task 2.2 changed log.txt
+3a3a635 (HEAD -> main) renamed variable to result in getTotalAmount
+59efb46 refactored getTotalAmount
+d0ca483 refactored getTotalVolumeAmount
+dccd9f2 (origin/main, origin/HEAD) Task 2.3 log.txt
+0b1b7fd got rid of frmt local variable
+74d7cf9 Task 2.2 changed log.txt
 bec0d9e completed extraction of getVolumeCredits
 fd6497c updated log.txt, Task 2.1
 b85cfe5 remove play parameter from getAmount
