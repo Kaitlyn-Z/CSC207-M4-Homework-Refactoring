@@ -48,19 +48,18 @@ public class StatementPrinter {
         final NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
 
         for (Performance performance : invoice.getPerformances()) {
-            final Play play = plays.get(performance.getPlayID());
 
-            final int currentAmount = getAmount(performance, play);
+            final int currentAmount = getAmount(performance);
 
             // add volume credits
             volumeCredits += Math.max(performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
             // add extra credit for every five comedy attendees
-            if ("comedy".equals(play.getType())) {
+            if ("comedy".equals(getPlay(performance).getType())) {
                 volumeCredits += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
             }
 
             // print line for this order
-            result.append(String.format("  %s: %s (%s seats)%n", play.getName(),
+            result.append(String.format("  %s: %s (%s seats)%n", getPlay(performance).getName(),
                     frmt.format(currentAmount / Constants.PERCENT_FACTOR), performance.getAudience()));
             totalAmount += currentAmount;
         }
@@ -69,9 +68,13 @@ public class StatementPrinter {
         return result.toString();
     }
 
-    private static int getAmount(Performance performance, Play play) {
+    private Play getPlay(Performance performance) {
+        return plays.get(performance.getPlayID());
+    }
+
+    private int getAmount(Performance performance) {
         int thisAmount = 0;
-        switch (play.getType()) {
+        switch (getPlay(performance).getType()) {
             case "tragedy":
                 thisAmount = Constants.TRAGEDY_BASE_AMOUNT;
                 if (performance.getAudience() > Constants.TRAGEDY_AUDIENCE_THRESHOLD) {
@@ -89,7 +92,7 @@ public class StatementPrinter {
                 thisAmount += Constants.COMEDY_AMOUNT_PER_AUDIENCE * performance.getAudience();
                 break;
             default:
-                throw new RuntimeException(String.format("unknown type: %s", play.getType()));
+                throw new RuntimeException(String.format("unknown type: %s", getPlay(performance).getType()));
         }
         return thisAmount;
     }
