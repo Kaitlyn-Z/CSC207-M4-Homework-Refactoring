@@ -49,15 +49,18 @@ public class StatementPrinter {
                     usd(getAmount(performance)), performance.getAudience()));
         }
 
+        result.append(String.format("Amount owed is %s%n",
+                usd(getTotalAmount())));
+        result.append(String.format("You earned %s credits%n", getTotalVolumeCredits()));
+        return result.toString();
+    }
+
+    private int getTotalAmount() {
         int totalAmount = 0;
         for (Performance performance : invoice.getPerformances()) {
             totalAmount += getAmount(performance);
         }
-
-        result.append(String.format("Amount owed is %s%n",
-                usd(totalAmount)));
-        result.append(String.format("You earned %s credits%n", getTotalVolumeCredits()));
-        return result.toString();
+        return totalAmount;
     }
 
     private int getTotalVolumeCredits() {
